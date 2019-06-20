@@ -1,13 +1,70 @@
+// alignment
 $text-alignment: center;
 
-.header {
-  text-align: $text-alignment;
+// margins and padding
+$section-separation: 25px;
+
+// font
+$font-size: 20px;
+$font-family: Verdana;
+
+// other styling
+$rounded: 4px;
+$input-and-button-height: 30px;
+
+body {
+  font-size: $font-size;
+  font-family: $font-family;
 }
 
-.list {
-  @extend .header;
+.app {
+  text-align: $text-alignment;
+  max-width: 50vw;
+  margin: 0 25vw 0 25vw;
+}
+
+.header {
+  margin-bottom: $section-separation;
 }
 
 .footer {
-  @extend .header;
+  margin-top: $section-separation;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 25px;
+}
+
+button {
+  margin-left: 5px;
+  border-radius: $rounded;
+  height: $input-and-button-height;
+  &:active {
+    color: white;
+    background-color: gray;
+  }
+}
+
+.item-input {
+  width: 200px;
+  border: 1px solid gray;
+  border-radius: $rounded;
+  height: $input-and-button-height;
+  padding: 0;
+  text-indent: 5px;
+}
+
+ul {
+  li {
+    margin-top: 3px;
+    input {
+      margin-right: 10px;
+      background-color: blue !important;
+      &:checked {
+        background-color: blue !important;
+      }
+    }
+  }
 }
