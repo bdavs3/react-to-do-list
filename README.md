@@ -2,7 +2,7 @@
 
 ### Description
 
-A basic [React](http://reactjs.org) web-app built for learning purposes. Inspired by a similar exercise found in Microsoft's [frontend bootcamp](https://github.com/microsoft/frontend-bootcamp).
+A basic [React](http://reactjs.org) web-app built for learning purposes. Inspired by a similar exercise found in Microsoft's [frontend bootcamp](https://github.com/microsoft/frontend-bootcamp). Styled with [Sass](https://sass-lang.com/).
 
 ### Functions
 
@@ -14,3 +14,7 @@ A basic [React](http://reactjs.org) web-app built for learning purposes. Inspire
 ### Road-blocks
 
 This is where I'll keep track of significant struggles I have in the process of coding this.
+
+### Things I Learned
+
+- Sass is cool and I don't think I'll ever just use vanilla Css again
