@@ -20,14 +20,14 @@ class Header extends React.Component {
           placeholder="Enter an item."
           className="item-input"
         />
-        <button onClick={this._addItem}>Add</button>
+        <button onClick={this._onAdd}>Add</button>
       </div>
     );
   }
 
   _handleKeyDown = evt => {
     if (evt.key === "Enter") {
-      this._addItem();
+      this._onAdd();
     }
   };
 
@@ -37,7 +37,7 @@ class Header extends React.Component {
     });
   };
 
-  _addItem = () => {
+  _onAdd = () => {
     this.props.addItem(this.state.inputValue);
     this.setState({
       inputValue: ""

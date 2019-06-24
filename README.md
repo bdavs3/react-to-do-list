@@ -70,14 +70,5 @@ This is where I'll keep track of significant struggles I have in the process of 
 
 - Sass has a lot of useful features and I don't think I'll ever just use vanilla CSS again
 - CSS resets provide a clean slate for starting projects without browser [user agent stylesheets](https://www.chainsawonatireswing.com/2016/09/20/web-browser-default-css-files/) getting in the way
-- Pass a `key` prop to list item React components so they may be uniquely identified. For example:
-
-```jsx
-<ul>
-  <ListItem key={key0} label={label0} />
-  <ListItem key={key1} label={label1} />
-  ...
-</ul>
-```
-
-If you don't do that, you'll see this warning: `Warning: Each child in a list should have a unique "key" prop`
+- Pass a `key` prop to list item React components so they may be uniquely identified. If you don't do that, you'll see this console message: `Warning: Each child in a list should have a unique "key" prop`.
+- Javascript Array methods like `map` and `filter` are not things I have used much before, but they are great

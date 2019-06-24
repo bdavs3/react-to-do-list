@@ -7,7 +7,7 @@ class Footer extends React.Component {
     return (
       <div className="footer">
         <label htmlFor="dropdown">View:</label>
-        <select id="dropdown">
+        <select id="dropdown" onChange={this._onChange}>
           <option value="all">All</option>
           <option value="to-do">To-do</option>
           <option value="completed">Completed</option>
@@ -16,6 +16,10 @@ class Footer extends React.Component {
       </div>
     );
   }
+
+  _onChange = evt => {
+    this.props.setFilter(evt.target.value);
+  };
 }
 
 export default Footer;

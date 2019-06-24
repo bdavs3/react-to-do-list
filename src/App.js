@@ -29,7 +29,11 @@ export class App extends React.Component {
           items={items}
           filter={filter}
         />
-        <Footer clearCompleted={this._clearCompleted} />
+        <Footer
+          clearCompleted={this._clearCompleted}
+          setFilter={this._setFilter}
+          filter={filter}
+        />
       </div>
     );
   }
@@ -65,6 +69,12 @@ export class App extends React.Component {
     });
 
     this.setState({ items: newItems });
+  };
+
+  _setFilter = filter => {
+    this.setState({
+      filter: filter
+    });
   };
 }
 

@@ -4,22 +4,31 @@ import ListItem from "./list-item";
 
 class List extends React.Component {
   render() {
-    const { toggleCompletion, items } = this.props;
-    const mappedItems = Object.entries(items).map(([key, value]) => {
-      return (
-        <ListItem
-          toggleCompletion={toggleCompletion}
-          completed={value.completed}
-          key={key}
-          id={key}
-          label={value.label}
-        />
-      );
-    });
+    const { toggleCompletion, filter, items } = this.props;
+
+    const filteredItems = Object.entries(items)
+      .filter(([key, value]) => {
+        return (
+          filter === "all" ||
+          (filter === "completed" && items[key].completed) ||
+          (filter === "to-do" && !items[key].completed)
+        );
+      })
+      .map(([key, value]) => {
+        return (
+          <ListItem
+            toggleCompletion={toggleCompletion}
+            completed={value.completed}
+            key={key}
+            id={key}
+            label={value.label}
+          />
+        );
+      });
 
     return (
       <div className="list">
-        <ul>{mappedItems}</ul>
+        <ul>{filteredItems}</ul>
       </div>
     );
   }
