@@ -2,12 +2,16 @@ import React from "react";
 
 class ListItem extends React.Component {
   render() {
-    const { name } = this.props;
+    const { toggleCompletion, completed, id, label } = this.props;
 
     return (
-      <li>
-        <input type="checkbox" />
-        {name}
+      <li className={completed ? "complete" : "incomplete"}>
+        <input
+          type="checkbox"
+          checked={completed}
+          onChange={() => toggleCompletion(id)}
+        />
+        {label}
       </li>
     );
   }

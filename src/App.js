@@ -24,8 +24,12 @@ export class App extends React.Component {
     return (
       <div className="app">
         <Header addItem={this._addItem} />
-        <List items={items} filter={filter} />
-        <Footer />
+        <List
+          toggleCompletion={this._toggleCompletion}
+          items={items}
+          filter={filter}
+        />
+        <Footer clearCompleted={this._clearCompleted} />
       </div>
     );
   }
@@ -37,6 +41,30 @@ export class App extends React.Component {
     this.setState({
       items: { ...items, [id]: { label, completed: false } }
     });
+  };
+
+  _toggleCompletion = id => {
+    const { items } = this.state;
+    const item = items[id];
+    const newItems = {
+      ...items,
+      [id]: { ...item, completed: !item.completed }
+    };
+
+    this.setState({ items: newItems });
+  };
+
+  _clearCompleted = () => {
+    const { items } = this.state;
+    const newItems = {};
+
+    Object.keys(this.state.items).forEach(id => {
+      if (!items[id].completed) {
+        newItems[id] = items[id];
+      }
+    });
+
+    this.setState({ items: newItems });
   };
 }
 

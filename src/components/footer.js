@@ -2,6 +2,8 @@ import React from "react";
 
 class Footer extends React.Component {
   render() {
+    const { clearCompleted } = this.props;
+
     return (
       <div className="footer">
         <label htmlFor="dropdown">View:</label>
@@ -10,7 +12,7 @@ class Footer extends React.Component {
           <option value="to-do">To-do</option>
           <option value="completed">Completed</option>
         </select>
-        <button>Clear</button>
+        <button onClick={clearCompleted}>Clear</button>
       </div>
     );
   }

@@ -48,18 +48,23 @@ npm start
 yarn start
 ```
 
-### Functions
+### Intended Behavior
 
 - Add items to the to-do list by typing in a text field and clicking a button or pressing 'enter'
 - Check mark the items when they are finished
 - Remove items that are finished by pressing a 'clear completed items' button
 - Switch between three views: 'all', 'to-do', and 'completed'
 
+##### Here's what I have in mind:
+
+<div style="text-align: center;"><img src="./src/images/mockup.png" width="603" height="450" ></img></div>
+
 ### Road-blocks
 
 This is where I'll keep track of significant struggles I have in the process of coding this.
 
 - Data flow: I was having trouble figuring out how to pass data from one component to another. For example, I wanted the `Header`'s `add` button to take the value of the text field in Header and create a `ListItem` from that which is added to the `List`. I knew this would involve using React's [state](https://reactjs.org/docs/state-and-lifecycle.html) and [props](https://reactjs.org/docs/components-and-props.html), but I wasn't sure exactly what to do. I found that having functions live together in the `App.js` file (which you pass as props to the individual components) works quite well. These functions should be ones involving multiple components
+- App state functions: I leaned heavily on the [Microsoft frontend bootcamp](https://github.com/microsoft/frontend-bootcamp) approach to maintaining state for this application. I needed help in figuring out how to write functions that alter this state in order to add new items to the list or mark items as completed.
 
 ### Things I Learned
 
