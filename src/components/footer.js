@@ -4,7 +4,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        <label for="dropdown">View:</label>
+        <label htmlFor="dropdown">View:</label>
         <select id="dropdown">
           <option value="all">All</option>
           <option value="to-do">To-do</option>

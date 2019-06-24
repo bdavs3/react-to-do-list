@@ -1,24 +1,17 @@
 import React from "react";
-import { blue } from "ansi-colors";
+
+import ListItem from "./list-item";
 
 class List extends React.Component {
   render() {
+    const { items } = this.props;
+    const mappedItems = Object.entries(items).map(([key, value]) => {
+      return <ListItem key={key} name={value.label} />;
+    });
+
     return (
       <div className="list">
-        <ul>
-          <li>
-            <input type="checkbox" />
-            Item 1
-          </li>
-          <li>
-            <input type="checkbox" />
-            Item 2
-          </li>
-          <li>
-            <input type="checkbox" />
-            Item 3
-          </li>
-        </ul>
+        <ul>{mappedItems}</ul>
       </div>
     );
   }

@@ -4,6 +4,50 @@
 
 A basic [React](http://reactjs.org) web-app built for learning purposes. Inspired by a similar exercise found in Microsoft's [frontend bootcamp](https://github.com/microsoft/frontend-bootcamp). Styled with [Sass](https://sass-lang.com/).
 
+### How to Run
+
+Clone this repository somewhere on your machine by running\
+\
+**HTTPS:**
+
+```sh
+git clone https://github.com/bdavs3/react-to-do-list.git
+```
+
+**SSH:**
+
+```sh
+git clone git@github.com:bdavs3/react-to-do-list.git
+```
+
+Then, to install dependencies, simply run\
+\
+**NPM:**
+
+```sh
+npm install
+```
+
+**Yarn:**
+
+```sh
+yarn install
+```
+
+You'll find the app at localhost:3000 in your browser by running\
+\
+**NPM:**
+
+```sh
+npm start
+```
+
+**Yarn:**
+
+```sh
+yarn start
+```
+
 ### Functions
 
 - Add items to the to-do list by typing in a text field and clicking a button or pressing 'enter'
@@ -15,6 +59,20 @@ A basic [React](http://reactjs.org) web-app built for learning purposes. Inspire
 
 This is where I'll keep track of significant struggles I have in the process of coding this.
 
+- Data flow: I was having trouble figuring out how to pass data from one component to another. For example, I wanted the `Header`'s `add` button to take the value of the text field in Header and create a `ListItem` from that which is added to the `List`. I knew this would involve using React's [state](https://reactjs.org/docs/state-and-lifecycle.html) and [props](https://reactjs.org/docs/components-and-props.html), but I wasn't sure exactly what to do. I found that having functions live together in the `App.js` file (which you pass as props to the individual components) works quite well. These functions should be ones involving multiple components
+
 ### Things I Learned
 
-- Sass is cool and I don't think I'll ever just use vanilla Css again
+- Sass has a lot of useful features and I don't think I'll ever just use vanilla CSS again
+- CSS resets provide a clean slate for starting projects without browser [user agent stylesheets](https://www.chainsawonatireswing.com/2016/09/20/web-browser-default-css-files/) getting in the way
+- Pass a `key` prop to list item React components so they may be uniquely identified. For example:
+
+```jsx
+<ul>
+  <ListItem key={key0} label={label0} />
+  <ListItem key={key1} label={label1} />
+  ...
+</ul>
+```
+
+If you don't do that, you'll see this warning: `Warning: Each child in a list should have a unique "key" prop`
