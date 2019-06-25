@@ -10,6 +10,7 @@ class ListItem extends React.Component {
         onClick={() => toggleCompletion(id)}
       >
         <input
+          className="checkbox"
           type="checkbox"
           checked={completed}
           onChange={() => toggleCompletion(id)}

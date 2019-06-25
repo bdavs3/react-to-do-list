@@ -12,7 +12,9 @@ class Footer extends React.Component {
           <option value="to-do">To-do</option>
           <option value="completed">Completed</option>
         </select>
-        <button onClick={clearCompleted}>Clear</button>
+        <button className="clear-button" onClick={clearCompleted}>
+          Clear
+        </button>
       </div>
     );
   }

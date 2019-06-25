@@ -20,7 +20,9 @@ class Header extends React.Component {
           placeholder="Enter an item."
           className="item-input"
         />
-        <button onClick={this._onAdd}>Add</button>
+        <button className="add-button" onClick={this._onAdd}>
+          Add
+        </button>
       </div>
     );
   }
