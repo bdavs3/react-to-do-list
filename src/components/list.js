@@ -7,6 +7,7 @@ class List extends React.Component {
     const { toggleCompletion, filter, items } = this.props;
 
     const filteredItems = Object.entries(items)
+      // items must pass a test that determines whether they should be viewed with the current filter
       .filter(([key, value]) => {
         return (
           filter === "all" ||
@@ -14,6 +15,7 @@ class List extends React.Component {
           (filter === "to-do" && !items[key].completed)
         );
       })
+      // items that survive the filter are then turned into ListItems
       .map(([key, value]) => {
         return (
           <ListItem

@@ -14,7 +14,9 @@ class Header extends React.Component {
       <div className="header">
         <h1>React To-do List</h1>
         <input
-          id="itemInput"
+          ref={input => {
+            this.itemInput = input;
+          }}
           onKeyDown={this._handleKeyDown}
           onChange={this._inputKeystroke}
           placeholder="Enter an item."
@@ -27,6 +29,7 @@ class Header extends React.Component {
     );
   }
 
+  // allows for user to press enter instead of the add button to create a list item
   _handleKeyDown = evt => {
     if (evt.key === "Enter") {
       this._onAdd();
@@ -40,11 +43,12 @@ class Header extends React.Component {
   };
 
   _onAdd = () => {
+    // passes input value to the App to handle
     this.props.addItem(this.state.inputValue);
     this.setState({
       inputValue: ""
     });
-    document.getElementById("itemInput").value = "";
+    this.itemInput.value = "";
   };
 }
 

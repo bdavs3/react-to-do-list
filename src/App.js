@@ -47,6 +47,7 @@ export class App extends React.Component {
     });
   };
 
+  // the functions below are all passed as props to various components so that they may shared share data with each other or update the state of <App />
   _toggleCompletion = id => {
     const { items } = this.state;
     const item = items[id];
