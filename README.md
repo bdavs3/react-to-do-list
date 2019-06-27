@@ -2,7 +2,8 @@
 
 ### Description
 
-A basic [React](http://reactjs.org) web-app built for learning purposes. Inspired by a similar exercise found in Microsoft's [frontend bootcamp](https://github.com/microsoft/frontend-bootcamp). Styled with [Sass](https://sass-lang.com/) and tested with [Jest](https://jestjs.io/) and [Enzyme](https://github.com/airbnb/enzyme).
+A basic [React](http://reactjs.org) web-app built for learning purposes. Inspired by a similar exercise found in Microsoft's [frontend bootcamp](https://github.com/microsoft/frontend-bootcamp). Styled with [Sass](https://sass-lang.com/) and tested with [Jest](https://jestjs.io/) and [Enzyme](https://github.com/airbnb/enzyme).\
+Take a look at `src/components/` and `src/app.js` to see how it works and at `src/app.scss` to see how it's styled.
 
 ### How to Run
 
@@ -20,33 +21,13 @@ git clone https://github.com/bdavs3/react-to-do-list.git
 git clone git@github.com:bdavs3/react-to-do-list.git
 ```
 
-Then, to install dependencies, simply run\
-\
-**NPM:**
+Once you `cd react-to-do-list`, install the dependencies: Simply run `npm install` or `yarn install`.
 
-```sh
-npm install
-```
+You'll find the app at localhost:3000 in your browser by running `npm start` or `yarn start`.
 
-**Yarn:**
+### Testing
 
-```sh
-yarn install
-```
-
-You'll find the app at localhost:3000 in your browser by running\
-\
-**NPM:**
-
-```sh
-npm start
-```
-
-**Yarn:**
-
-```sh
-yarn start
-```
+I worked hard to write good tests for this program, which you can find in `App.test.js`. I encourage you to check them out and run them using `npm test` or `yarn test`.
 
 ### Intended Behavior
 
@@ -55,9 +36,13 @@ yarn start
 - Remove items that are finished by pressing a 'clear completed items' button
 - Switch between three views: 'all', 'to-do', and 'completed'
 
-##### Here's what I have in mind:
+##### Here's what I had in mind at the beginning...
 
-<div style="text-align: center;"><img src="./src/images/mockup.png" width="603" height="450" ></img></div>
+<p align="center"><img src="./src/images/mockup.png" width="465" height="347" ></img></p>
+
+##### And here's the finished product!
+
+<p align="center"><img src="./src/images/finished.png" width="465" height="387"></img></p>
 
 ### Road-blocks
 
